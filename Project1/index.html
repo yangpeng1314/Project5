@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css"> 
+    <style>
+        .header{
+            display:flex;
+            width:100%;
+        }
+        .header img{
+            width:8%;
+            height:8%;
+        }
+        .h_d{
+            display:flex;   
+            width:100%;
+            flex-direction: row-reverse; 
+        }
+        .h_d div{
+            width:8%;
+            height:30%;
+            text-align: center;
+            margin-top: 2%;
+            transition: all .7s linear;
+        }
+        .h_d div.hover{
+            order: 1px solid #aaa;
+            box-shadow: 0 0 5px #000;
+            border-radius: 5px;  
+        }
+        .h_d a{
+            text-decoration: none;
+            color:#000;
+        }
+        .dropdown{
+            padding:0 ;
+            margin: 0%;
+        }
+        .dropdown>a{							
+			text-decoration:none; 
+			color:#000;
+            display:inline-block;
+            margin:2%;
+		}
+		.dropdown-menu{
+            position: absolute;	   							
+			margin-top:0; 
+			list-style:none;  padding:0; 
+			border:1px solid #aaa;
+			box-shadow:5px 5px 6px #000;
+            opacity: 0 ;
+            transition: all 0.5s linear;
+            width:9%;
+
+        }
+        .dropdown-menu li{
+            text-align: left;
+            padding:5%;
+        }
+		.dropdown ul.hover{
+            opacity: 1 ;
+            background:#aaa;
+            border-radius: 5px;
+        }
+        
+		.dropdown-menu li:hover{background:#ddd}  
+    </style> 
+</head>
+<body>
+    <header class="header">
+        <img src="img/LOGO.png" alt="">
+        <div class="h_d">
+            <div><a href="#">联系我们</a></div>
+            <div><a href="#">加入我们</a></div>
+            <div><a href="#">新闻中心</a></div>
+            <div><a href="#">技术咨询</a></div>
+            <div><a href="#">轩艺案例</a></div>
+            <div class="dropdown"><a href="#" data-trigger="dropdown">花园维护</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">花园维护</a></li>
+                    <li><a href="#">如何打理花园</a></li>
+                    <li><a href="#">打理花园</a></li>
+                    <li><a href="#">花园设计</a></li>
+                </ul>
+            </div>
+            <div><a href="#">轩艺</a></div>
+            <div><a href="#">首页</a></div>
+        </div>
+    </header>
+    <!-- http://uc.zhuzi.me/#/template/view/271  -->
+    
+    <div class="foot1">
+        <img src="img/1.jpg" class="dingshi">
+        <p class="sp">为您打造不平凡的花园</p>
+    </div>
+    <div class="foot2">
+        <div class="div1">
+            <h1></h1>
+            <h1>概念</h1>
+            <h2>轩艺园林景观工程有限公司是一家具有前沿设计理念和规范化模式的专业性景观规划与设计公司。公司成立于2018年，现有在职员工100余人，占地面积约400平方米。公司拥有风景园林工程设计综合资质。</h2>
+        </div>
+        <img src="img/5.jpeg" alt="">
+    </div>
+    <div class="foot3">
+        <h2>事情”会风化。在房子里也是如此，但它仍然在户外花园。
+            利用这些旧材料，我们利用与树木，石头和竹子不同的天然材料制作花园。
+        </h2>
+        <img src="img/6.jpg" alt="">
+        
+        <div>
+            <h1>庄园丨设计</h1>  
+        </div>
+    </div>
+    <div class="foot4">
+        <div>
+            <h1>农场设计</h1>
+        </div>
+        <h2>
+            花园始于大自然和众神的信仰，并表现出对宗教和思想以及对自然的尊重的微妙和平静的表达。
+        </h2>
+        <img src="img/7.jpg" alt="">
+    </div>
+    <div class="foot5">
+        <div class="d1">
+            <h1>修剪·花园管理·害虫防治</h1>
+            <p>
+                “关心与爱”是最重要的，但不熟悉的任务是相当困难的，一位拥有丰富实地经验的高级工艺师将帮助保持重要的花园美丽的年度单位。
+            </p>
+        </div>
+        <img src="img/8.jpg" alt="" class="img1">
+        <div class="d2">
+            <ul>
+                <li>我们提出了一个空间=花园，可以在城市生活的同时进行</li>
+                <li>森林浴，尽可能使用天然树木</li>
+                <li class="i3">如果您有兴趣，请先告诉我。</li>
+                <li>100-1000000</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="foot_last">
+            <ul>
+                <li>地址：互联网省域名市666号</li>
+                <li>电话：100-000-0000</li>
+                <li>传真：100-00000000</li>
+                <li>邮箱：10000@qq.com</li>
+            </ul>
+        </div>
+        <img src="img/LOGO.png" alt="">
+        <span>COPYRIGHT(©)2018模板板块</span>
+    </footer>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script>
+            $("div").hover(
+            function(){
+                $(this).toggleClass("hover")
+                }
+            )
+            $(".dropdown").hover(
+                function(){
+                    $(this).children().toggleClass("hover")
+                }
+            )
+    </script>
+</body>
+</html>
